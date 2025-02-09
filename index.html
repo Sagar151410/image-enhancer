@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Background Remover & Enhancer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Image Background Remover & Enhancer</h2>
+        <input type="file" id="upload" accept="image/*"><br><br>
+        <div class="spinner" id="spinner"></div>
+        <img id="preview" style="display:none;">
+        <button id="download" style="display:none;">Download Processed Image</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
