@@ -39,5 +39,9 @@ def process_image():
 
     return send_file(processed_path, mimetype='image/png')
 
+import os
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 10000))  # Get PORT from Render, default to 10000
+    app.run(host='0.0.0.0', port=port, debug=True)
+
